@@ -1,67 +1,70 @@
-// Year
+// year
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Snap toggle
+const snapRoot = document.getElementById("snapRoot");
+const snapToggle = document.getElementById("snapToggle");
+
+function setSnap(on) {
+  if (on) {
+    snapRoot.classList.add("snap");
+    snapToggle.textContent = "Snap: ON";
+    localStorage.setItem("snap", "on");
+  } else {
+    snapRoot.classList.remove("snap");
+    snapToggle.textContent = "Snap: OFF";
+    localStorage.setItem("snap", "off");
+  }
+}
+
+const storedSnap = localStorage.getItem("snap");
+setSnap(storedSnap !== "off");
+
+snapToggle.addEventListener("click", () => {
+  setSnap(!snapRoot.classList.contains("snap"));
+});
+
+// Reveal on section enter (works great with snap)
+const reveals = Array.from(document.querySelectorAll(".reveal"));
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("show");
+    });
+  },
+  { threshold: 0.25 }
+);
+reveals.forEach((el) => io.observe(el));
+
 // Copy email
-const copyBtn = document.getElementById("copyEmail");
-if (copyBtn) {
-  copyBtn.addEventListener("click", async () => {
+const copyEmailBtn = document.getElementById("copyEmail");
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener("click", async () => {
     const email = "vjraj0254@gmail.com";
     try {
       await navigator.clipboard.writeText(email);
-      copyBtn.textContent = "Copied!";
-      setTimeout(() => (copyBtn.textContent = "Copy Email"), 1200);
+      copyEmailBtn.textContent = "Copied!";
+      setTimeout(() => (copyEmailBtn.textContent = "Copy Email"), 1200);
     } catch {
       alert(email);
     }
   });
 }
 
-// Theme toggle (persist)
-const themeToggle = document.getElementById("themeToggle");
-const storedTheme = localStorage.getItem("theme");
-if (storedTheme) document.documentElement.setAttribute("data-theme", storedTheme);
-
-function updateThemeIcon() {
-  const t = document.documentElement.getAttribute("data-theme");
-  themeToggle.textContent = t === "light" ? "🌞" : "🌙";
-}
-if (themeToggle) updateThemeIcon();
-
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
-    const next = current === "light" ? "" : "light";
-    if (next) document.documentElement.setAttribute("data-theme", next);
-    else document.documentElement.removeAttribute("data-theme");
-    localStorage.setItem("theme", next || "");
-    updateThemeIcon();
-  });
-}
-
-// Project filtering + search
+// Project filter + search
 const chips = Array.from(document.querySelectorAll(".chip"));
 const projects = Array.from(document.querySelectorAll(".project"));
 const search = document.getElementById("projectSearch");
-
 let activeFilter = "all";
 
-function matchesFilter(project) {
-  if (activeFilter === "all") return true;
-  return project.dataset.category === activeFilter;
-}
-
-function matchesSearch(project) {
+function applyProjects() {
   const q = (search?.value || "").toLowerCase().trim();
-  if (!q) return true;
-  const text = project.innerText.toLowerCase();
-  const tags = (project.dataset.tags || "").toLowerCase();
-  return text.includes(q) || tags.includes(q);
-}
-
-function applyProjectVisibility() {
   projects.forEach((p) => {
-    const show = matchesFilter(p) && matchesSearch(p);
-    p.style.display = show ? "" : "none";
+    const matchesFilter = activeFilter === "all" || p.dataset.category === activeFilter;
+    const text = p.innerText.toLowerCase();
+    const tags = (p.dataset.tags || "").toLowerCase();
+    const matchesSearch = !q || text.includes(q) || tags.includes(q);
+    p.style.display = matchesFilter && matchesSearch ? "" : "none";
   });
 }
 
@@ -70,13 +73,11 @@ chips.forEach((chip) => {
     chips.forEach((c) => c.classList.remove("active"));
     chip.classList.add("active");
     activeFilter = chip.dataset.filter;
-    applyProjectVisibility();
+    applyProjects();
   });
 });
 
-if (search) {
-  search.addEventListener("input", applyProjectVisibility);
-}
+if (search) search.addEventListener("input", applyProjects);
 
 // Modal
 const modal = document.getElementById("modal");
@@ -97,18 +98,15 @@ function closeModal() {
 }
 
 document.querySelectorAll("[data-modal-title]").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    openModal(btn.dataset.modalTitle, btn.dataset.modalBody || "");
-  });
+  btn.addEventListener("click", () => openModal(btn.dataset.modalTitle, btn.dataset.modalBody || ""));
 });
 
-if (modalClose) modalClose.addEventListener("click", closeModal);
+modalClose.addEventListener("click", closeModal);
 
-if (modal) {
-  modal.addEventListener("click", (e) => {
-    if (e.target && e.target.dataset && e.target.dataset.close === "true") closeModal();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
-  });
-}
+modal.addEventListener("click", (e) => {
+  if (e.target?.dataset?.close === "true") closeModal();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+});
