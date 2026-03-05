@@ -127,22 +127,21 @@ function setActiveNav(id) {
 
 const observer = new IntersectionObserver(
   (entries) => {
-    // reveal animations
     entries.forEach((entry) => {
+      // reveal animation
       if (entry.isIntersecting) entry.target.classList.add("in-view");
+
+      // nav highlight: only when most of the section is visible
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+        setActiveNav(entry.target.id);
+      }
     });
-
-    // pick the most visible section to highlight
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-    if (visible?.target?.id) setActiveNav(visible.target.id);
   },
-  { threshold: [0.25, 0.45, 0.6] }
+  {
+    threshold: [0.6],
+    rootMargin: `-${Math.round(parseInt(getComputedStyle(document.documentElement).getPropertyValue("--topbar-h")))}px 0px 0px 0px`
+  }
 );
 
 sections.forEach((s) => observer.observe(s));
-
-// Initial highlight
 setActiveNav("home");
