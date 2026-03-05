@@ -3,151 +3,238 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vijay Raj Venugopal | Portfolio</title>
+  <title>Vijay Raj Venugopal | Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Mechanical Engineer portfolio: field engineering, infrastructure projects, facilities operations, system integration, and robotics." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- Top Nav -->
   <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">VRV</div>
+    <div class="container topbar-inner">
+      <a class="logo" href="#home" aria-label="Go to top">VRV</a>
 
-      <nav class="nav">
-        <a href="#hero">Home</a>
+      <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#focus">Focus</a>
-        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="actions">
-        <button class="btn ghost" id="snapToggle" type="button">Snap: ON</button>
-        <a class="btn primary" href="Vijay Raj Venugopal Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <div class="topbar-actions">
+        <button class="btn ghost" id="themeToggle" type="button" aria-label="Toggle theme">🌙</button>
+        <a class="btn primary" href="Vijay_Raj_Venugopal_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
       </div>
     </div>
   </header>
 
-  <main id="snapRoot" class="snap">
-    <!-- HERO -->
-    <section id="hero" class="panel">
-      <div class="panel-inner reveal">
-        <div class="hero-grid">
-          <div class="hero-text">
-            <p class="kicker">Field Engineering • Construction • Infrastructure • Mechanical</p>
-            <h1>Vijay Raj <span class="accent">Venugopal</span></h1>
-            <p class="lead">
-              Mechanical Engineering graduate with hands-on experience in field execution,
-              quality control, infrastructure projects, and system integration. Open to roles across
-              field engineering, construction, and mechanical operations.
-            </p>
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="kicker">Mechanical Engineer • Field Engineering • System Integration</p>
+          <h1>Vijay Raj <span class="accent">Venugopal</span></h1>
 
-            <div class="pill-row">
-              <span class="pill">Site Supervision</span>
-              <span class="pill">Safety & Quality</span>
-              <span class="pill">Documentation</span>
-              <span class="pill">Testing & Troubleshooting</span>
-            </div>
+          <p class="lead">
+            Mechanical Engineering graduate with hands-on experience in infrastructure projects, facilities operations,
+            quality control, and system integration—plus practical exposure to robotics and software integration.
+          </p>
 
-            <div class="cta-row">
-              <a class="btn primary" href="#projects">View Projects</a>
-              <a class="btn" href="#contact">Contact</a>
-            </div>
-
-            <div class="links">
-              <a href="mailto:vjraj0254@gmail.com">vjraj0254@gmail.com</a>
-              <span class="sep">•</span>
-              <a href="https://github.com/vjraj0254-source" target="_blank" rel="noreferrer">GitHub</a>
-              <span class="sep">•</span>
-              <a href="https://www.linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
+          <div class="hero-badges">
+            <span class="pill">Field & Site Supervision</span>
+            <span class="pill">Quality & Safety Compliance</span>
+            <span class="pill">Testing & Validation</span>
+            <span class="pill">Robotics (ROS2/SLAM)</span>
           </div>
 
-          <div class="hero-card">
-            <img class="avatar" src="assets/profile.jpg" alt="Profile photo" onerror="this.style.display='none'">
-            <div class="hero-card-body">
-              <h2>Quick Profile</h2>
-              <ul>
-                <li>Pipeline + site execution experience</li>
-                <li>Facilities operations & work orders</li>
-                <li>System integration & testing mindset</li>
-                <li>Robotics exposure (ROS2/SLAM)</li>
-              </ul>
-              <p class="muted">Tip: Upload <strong>assets/profile.jpg</strong> to show your photo.</p>
-            </div>
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#experience">Experience</a>
+            <button class="btn ghost" type="button" id="copyEmail">Copy Email</button>
           </div>
+
+          <div class="links-row">
+            <a href="mailto:vjraj0254@gmail.com">vjraj0254@gmail.com</a>
+            <span class="dot">•</span>
+            <a href="https://www.linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="dot">•</span>
+            <a href="https://github.com/vjraj0254-source" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+
+          <p class="muted small">Lawrenceville, GA • Open to relocation</p>
         </div>
 
-        <div class="scroll-hint">Scroll ↓</div>
+        <aside class="hero-card" aria-label="Profile card">
+          <img class="avatar" src="profile.jpg" alt="Profile photo of Vijay Raj Venugopal" onerror="this.style.display='none'" />
+          <div class="hero-card-body">
+            <h2 class="card-title">Focus Areas</h2>
+            <ul class="mini-list">
+              <li>Infrastructure & Pipeline Site Execution</li>
+              <li>Facilities Operations & Work Order Management</li>
+              <li>System Testing, Troubleshooting, Reporting</li>
+              <li>Robotics Integration & Simulation (Gazebo/RViz2)</li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="panel alt">
-      <div class="panel-inner reveal">
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
         <h2>About</h2>
         <p class="muted">
-          I’m a mechanical engineer who enjoys field execution, hands-on problem solving, and keeping projects on track.
-          I’ve supported pipeline/infrastructure work with quality compliance, coordinated facilities operations,
-          and built a robotics-based system as a technical capstone.
+          I work best where execution meets engineering—on-site coordination, quality control, system testing,
+          and practical problem-solving. I’ve supported pipeline and infrastructure work, managed facilities operations,
+          and built an autonomous indoor robot system as my master’s project.
         </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Field Strengths</h3>
-            <p class="muted">Site coordination, safety mindset, quality checks, and clear communication.</p>
-          </div>
-          <div class="card">
-            <h3>Engineering Strengths</h3>
-            <p class="muted">Testing, troubleshooting, documentation, and continuous improvement.</p>
-          </div>
-          <div class="card">
-            <h3>Technical Depth</h3>
-            <p class="muted">CAD + analysis tools, Linux/Python/Java exposure, robotics integration.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOCUS -->
-    <section id="focus" class="panel">
-      <div class="panel-inner reveal">
-        <h2>What I’m targeting</h2>
-        <p class="muted">Primary: Field Engineer / Construction / Infrastructure. Also open to mechanical operations & testing roles.</p>
 
         <div class="grid-2">
           <div class="card">
-            <h3>Primary Track</h3>
-            <ul class="muted">
-              <li>Field Engineer / Site Engineer</li>
-              <li>Construction / Infrastructure Support</li>
-              <li>Quality / Safety / Compliance</li>
+            <h3>What I bring</h3>
+            <ul class="list">
+              <li>Strong field execution mindset with safety + quality focus</li>
+              <li>Clear documentation and stakeholder communication</li>
+              <li>Hands-on troubleshooting and process reliability improvement</li>
+              <li>Comfort working across mechanical + software interfaces</li>
             </ul>
           </div>
+
           <div class="card">
-            <h3>Open To</h3>
-            <ul class="muted">
-              <li>Mechanical / Facilities Operations</li>
-              <li>Testing / Validation / Commissioning</li>
-              <li>Systems Integration</li>
+            <h3>Quick Highlights</h3>
+            <ul class="list">
+              <li>Facilities work orders + cross-team coordination (ODU)</li>
+              <li>Pipeline construction monitoring + code compliance checks</li>
+              <li>Water pipeline installation supervision + QC checks</li>
+              <li>Java full-stack training + internship exposure</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="panel alt">
-      <div class="panel-inner reveal">
-        <div class="panel-head">
-          <div>
-            <h2>Projects</h2>
-            <p class="muted">Use the buttons to filter. Click “Details” to open a quick summary.</p>
+    <!-- Skills -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+          <div class="card">
+            <h3>Mechanical & Field</h3>
+            <div class="pill-row wrap">
+              <span class="pill">Site Supervision</span>
+              <span class="pill">Safety Compliance</span>
+              <span class="pill">Quality Control</span>
+              <span class="pill">Documentation</span>
+              <span class="pill">Process Reliability</span>
+            </div>
           </div>
-          <input id="projectSearch" class="search" type="search" placeholder="Search projects…" />
+
+          <div class="card">
+            <h3>Tools & Software</h3>
+            <div class="pill-row wrap">
+              <span class="pill">AutoCAD</span>
+              <span class="pill">MATLAB</span>
+              <span class="pill">Excel</span>
+              <span class="pill">Linux (Ubuntu)</span>
+              <span class="pill">Python</span>
+              <span class="pill">Java</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Robotics & Simulation</h3>
+            <div class="pill-row wrap">
+              <span class="pill">ROS2</span>
+              <span class="pill">SLAM (Cartographer)</span>
+              <span class="pill">Nav2</span>
+              <span class="pill">Gazebo</span>
+              <span class="pill">RViz2</span>
+              <span class="pill">Sensor Fusion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Old Dominion University — Facilities Management (Part-Time)</h3>
+              <p class="muted">Nov 2024 – Dec 2025</p>
+              <ul class="list compact">
+                <li>Managed high-volume facility work orders; prioritized requests to reduce disruption.</li>
+                <li>Coordinated cross-functional teams to maintain safety standards and improve task efficiency.</li>
+                <li>Delivered professional customer service supporting faculty, staff, and students.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>STRIA Constructions — Engineer Trainee (Quality Control / Pipeline)</h3>
+              <p class="muted">Oct 2021 – Nov 2022</p>
+              <ul class="list compact">
+                <li>Prepared progress reports and handover documentation; maintained quality records.</li>
+                <li>Monitored gas pipeline activities (trenching, coating, crossings, lowering, backfilling).</li>
+                <li>Verified compliance with approved procedures, codes, and drawings during site execution.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>SAS Electricals — Site Engineer (Water Pipeline)</h3>
+              <p class="muted">Jun 2020 – Oct 2021 • Sep 2023 – Dec 2023</p>
+              <ul class="list compact">
+                <li>Supervised water pipeline installation/alignment; validated trench depth and excavation safety.</li>
+                <li>Inspected materials and pipe batch numbers; maintained QC throughout installation.</li>
+                <li>Coordinated crews, schedules, and resource allocation to keep progress on track.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Quest Innovative Solutions — Trainee Software Engineer (Internship)</h3>
+              <p class="muted">Jan 2023 – Oct 2023</p>
+              <ul class="list compact">
+                <li>Completed Java full-stack training and applied skills on real project work.</li>
+                <li>Supported development, debugging, and performance-focused code improvements.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="filters">
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Projects</h2>
+            <p class="muted small">Filter by category, search, then open details.</p>
+          </div>
+
+          <input id="projectSearch" class="search" type="search" placeholder="Search projects (e.g., pipeline, ROS2, testing)..." />
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Project filters">
           <button class="chip active" data-filter="all" type="button">All</button>
           <button class="chip" data-filter="infrastructure" type="button">Infrastructure</button>
           <button class="chip" data-filter="facilities" type="button">Facilities</button>
@@ -155,117 +242,215 @@
           <button class="chip" data-filter="software" type="button">Software</button>
         </div>
 
-        <div class="cards">
-          <article class="card project" data-category="infrastructure" data-tags="pipeline qc site safety documentation">
-            <h3>Pipeline Monitoring & Quality Compliance</h3>
-            <p class="muted">Tracked execution, verified procedures, maintained records, and flagged issues early.</p>
-            <button class="btn small" type="button"
-              data-modal-title="Pipeline Monitoring & Quality Compliance"
-              data-modal-body="Monitored trenching, coating, crossings, lowering, and backfilling. Verified compliance with procedures/codes/drawings and maintained progress and quality documentation."
-            >Details</button>
+        <div id="projectsGrid" class="cards-grid">
+          <!-- Robotics -->
+          <article class="card project" data-category="robotics" data-tags="robotics ros2 slam nav2 lidar gazebo rviz2">
+            <h3>Autonomous Indoor Robot System (ROS2 + SLAM + Multi-Sensor)</h3>
+            <p class="muted">
+              Integrated ROS2 navigation with SLAM mapping/localization and LiDAR/camera/ultrasonic sensing.
+            </p>
+            <div class="meta">
+              <span class="tag">Master’s Project</span>
+              <span class="tag">Testing + Validation</span>
+              <span class="tag">Simulation + Real Trials</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn small" type="button"
+                data-modal-title="Autonomous Indoor Robot System"
+                data-modal-body="Designed and integrated an autonomous indoor mobile robot using ROS2 on Raspberry Pi platforms. Implemented SLAM (Cartographer), configured Nav2 for waypoint navigation, tuned planners/costmaps, validated localization accuracy, and tested in Gazebo + real indoor trials."
+              >Details</button>
+              <a class="btn small ghost" href="https://github.com/vjraj0254-source" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
           </article>
 
-          <article class="card project" data-category="infrastructure" data-tags="water pipeline site engineer alignment trench depth qc">
-            <h3>Water Pipeline Installation Supervision</h3>
-            <p class="muted">Supervised alignment/installation, checked trench depth, inspected materials, coordinated crews.</p>
-            <button class="btn small" type="button"
-              data-modal-title="Water Pipeline Installation Supervision"
-              data-modal-body="Supervised installation and alignment. Validated excavation safety, measured trench depth, verified batch numbers/material checks, and coordinated crews and schedules."
-            >Details</button>
+          <!-- Infrastructure -->
+          <article class="card project" data-category="infrastructure" data-tags="pipeline trenching qc safety documentation codes drawings">
+            <h3>Pipeline Construction Monitoring & Quality Compliance</h3>
+            <p class="muted">
+              Supported pipeline site execution by tracking progress, verifying procedures, and maintaining records.
+            </p>
+            <div class="meta">
+              <span class="tag">Quality Control</span>
+              <span class="tag">Codes & Drawings</span>
+              <span class="tag">Site Reporting</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn small" type="button"
+                data-modal-title="Pipeline Construction Monitoring"
+                data-modal-body="Monitored trenching, field joint coating, crossings, lowering, and backfilling. Verified compliance with approved procedures, applicable codes, and construction drawings. Maintained documentation and reported issues early to support smooth execution."
+              >Details</button>
+            </div>
           </article>
 
-          <article class="card project" data-category="facilities" data-tags="facilities work orders operations scheduling safety">
-            <h3>Facilities Operations (Work Orders)</h3>
-            <p class="muted">Managed high-volume requests, prioritized tasks, and coordinated teams for safe execution.</p>
-            <button class="btn small" type="button"
-              data-modal-title="Facilities Operations"
-              data-modal-body="Managed and closed a high volume of facility work orders, prioritized tasks, coordinated cross-functional teams, and maintained service quality."
-            >Details</button>
+          <!-- Infrastructure -->
+          <article class="card project" data-category="infrastructure" data-tags="water pipeline alignment trench depth excavation safety qc materials">
+            <h3>Water Pipeline Installation Supervision (Site Engineering)</h3>
+            <p class="muted">
+              Supervised installation/alignment, validated excavation safety, and ensured material/QC checks.
+            </p>
+            <div class="meta">
+              <span class="tag">Site Supervision</span>
+              <span class="tag">Safety</span>
+              <span class="tag">Quality Checks</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn small" type="button"
+                data-modal-title="Water Pipeline Site Engineering"
+                data-modal-body="Supervised pipeline installation and alignment per plans/specs. Measured trench depth and monitored excavation to maintain safety compliance. Verified pipe batch numbers and performed material inspections while coordinating crews and schedules."
+              >Details</button>
+            </div>
           </article>
 
-          <article class="card project" data-category="robotics" data-tags="ros2 slam nav2 lidar gazebo rviz2">
-            <h3>Autonomous Indoor Robot (ROS2 + SLAM)</h3>
-            <p class="muted">Integrated mapping/localization with navigation and sensor data for indoor autonomy.</p>
-            <button class="btn small" type="button"
-              data-modal-title="Autonomous Indoor Robot (ROS2 + SLAM)"
-              data-modal-body="Implemented SLAM (Cartographer) + Nav2 for indoor navigation, tuned planners/costmaps, and validated performance in simulation and trials."
-            >Details</button>
+          <!-- Facilities -->
+          <article class="card project" data-category="facilities" data-tags="facilities work orders operations safety coordination service">
+            <h3>Facilities Operations Optimization (Work Orders)</h3>
+            <p class="muted">
+              Managed high-volume requests and coordinated teams to reduce disruptions in a fast-paced campus environment.
+            </p>
+            <div class="meta">
+              <span class="tag">Operations</span>
+              <span class="tag">Scheduling</span>
+              <span class="tag">Customer Focus</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn small" type="button"
+                data-modal-title="Facilities Operations"
+                data-modal-body="Managed and closed a high volume of facility work orders, prioritized tasks across deadlines, coordinated cross-functional teams for safe execution, and maintained service quality for campus stakeholders."
+              >Details</button>
+            </div>
           </article>
 
-          <article class="card project" data-category="software" data-tags="java full stack debugging optimization">
-            <h3>Java Full-Stack Training & Internship</h3>
-            <p class="muted">Supported development, debugging, and basic performance-focused improvements.</p>
-            <button class="btn small" type="button"
-              data-modal-title="Java Full-Stack Training & Internship"
-              data-modal-body="Completed Java full-stack training and applied skills on project work including debugging and optimization."
-            >Details</button>
+          <!-- Software -->
+          <article class="card project" data-category="software" data-tags="java full stack debugging optimization database">
+            <h3>Java Full-Stack Training & Internship Work</h3>
+            <p class="muted">
+              Built core Java + web foundation, contributed to debugging and code optimization in project work.
+            </p>
+            <div class="meta">
+              <span class="tag">Java</span>
+              <span class="tag">Full-Stack</span>
+              <span class="tag">Debugging</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn small" type="button"
+                data-modal-title="Java Full-Stack Internship"
+                data-modal-body="Completed intensive Java full-stack training and applied skills on real projects. Supported development, debugging, and code optimization to improve performance and reliability."
+              >Details</button>
+            </div>
+          </article>
+
+          <!-- Undergrad Project -->
+          <article class="card project" data-category="infrastructure" data-tags="energy heat pump solar waste heat efficiency">
+            <h3>Solar + A/C Assisted Water Heat Pump (Undergrad Project)</h3>
+            <p class="muted">
+              Designed a waste-heat recovery concept using condenser heat + solar collector to improve efficiency.
+            </p>
+            <div class="meta">
+              <span class="tag">Energy Systems</span>
+              <span class="tag">Sustainability</span>
+              <span class="tag">Techno-Economic</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn small" type="button"
+                data-modal-title="Solar + A/C Assisted Water Heat Pump"
+                data-modal-body="Investigated waste heat recovery from split A/C systems and repurposed condenser heat for domestic water heating. Integrated a solar collector to boost heat absorption and improved overall energy utilization with a feasible concept."
+              >Details</button>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="panel">
-      <div class="panel-inner reveal">
-        <h2>Experience (snapshot)</h2>
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2>Education</h2>
+
         <div class="grid-2">
           <div class="card">
-            <h3>Field / Infrastructure</h3>
-            <ul class="muted">
-              <li>Pipeline site monitoring & QC documentation</li>
-              <li>Water pipeline installation supervision</li>
-              <li>Safety checks, compliance, progress tracking</li>
-            </ul>
+            <h3>M.Eng. Mechanical Engineering</h3>
+            <p class="muted">Old Dominion University • Dec 2025 • GPA 3.54</p>
           </div>
           <div class="card">
-            <h3>Operations / Integration</h3>
-            <ul class="muted">
-              <li>Facilities operations & high-volume work orders</li>
-              <li>Troubleshooting + coordination across teams</li>
-              <li>Technical exposure: Linux, Python/Java, robotics</li>
-            </ul>
+            <h3>B.E. Mechanical Engineering</h3>
+            <p class="muted">Bir Tikendrajit University • Dec 2023 • GPA 3.33</p>
+          </div>
+        </div>
+
+        <div class="card spacer">
+          <h3>Certification</h3>
+          <p class="muted">Java Certification Course — Quest Innovative Solutions (Apr 2023)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="section alt">
+      <div class="container">
+        <h2>Leadership & Volunteering</h2>
+
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Y’s Men / Y’s Youth Club</h3>
+            <p class="muted">President (2 years) • Community service leadership and event coordination</p>
+          </div>
+          <div class="card">
+            <h3>Rise Up Forum</h3>
+            <p class="muted">Community relief initiatives • On-ground coordination and supply distribution</p>
+          </div>
+          <div class="card">
+            <h3>MRA</h3>
+            <p class="muted">Charitable initiatives • Organized service activities supporting communities</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="panel alt">
-      <div class="panel-inner reveal">
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
         <h2>Contact</h2>
-        <div class="grid-3">
-          <div class="card">
+
+        <div class="contact-card">
+          <div class="contact-item">
             <p class="label">Email</p>
-            <a href="mailto:vjraj0254@gmail.com">vjraj0254@gmail.com</a>
-            <div class="spacer"></div>
-            <button class="btn small ghost" id="copyEmail" type="button">Copy Email</button>
+            <p><a href="mailto:vjraj0254@gmail.com">vjraj0254@gmail.com</a></p>
           </div>
-          <div class="card">
+
+          <div class="contact-item">
+            <p class="label">Phone</p>
+            <p><a href="tel:+17573196579">757-319-6579</a></p>
+          </div>
+
+          <div class="contact-item">
             <p class="label">LinkedIn</p>
-            <a href="https://www.linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noreferrer">Open profile</a>
-          </div>
-          <div class="card">
-            <p class="label">GitHub</p>
-            <a href="https://github.com/vjraj0254-source" target="_blank" rel="noreferrer">View repositories</a>
+            <p><a href="https://www.linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noreferrer">View profile</a></p>
           </div>
         </div>
 
-        <p class="muted small">© <span id="year"></span> Vijay Raj Venugopal</p>
+        
       </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-panel" role="document">
+        <div class="modal-head">
+          <h3 id="modalTitle">Title</h3>
+          <button class="btn ghost small" type="button" id="modalClose" aria-label="Close">✕</button>
+        </div>
+        <p class="muted" id="modalBody"></p>
+      </div>
+    </div>
   </main>
 
-  <!-- Modal -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-panel" role="document">
-      <div class="modal-head">
-        <h3 id="modalTitle">Title</h3>
-        <button class="btn ghost small" type="button" id="modalClose">✕</button>
-      </div>
-      <p class="muted" id="modalBody"></p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="muted small">© <span id="year"></span> Vijay Raj Venugopal</p>
+      <a class="muted small" href="#home">Back to top ↑</a>
     </div>
-  </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
