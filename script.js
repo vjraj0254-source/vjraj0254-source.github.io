@@ -22,11 +22,10 @@ const storedTheme = localStorage.getItem("theme");
 if (storedTheme) document.documentElement.setAttribute("data-theme", storedTheme);
 
 function updateThemeIcon() {
-  if (!themeToggle) return;
   const t = document.documentElement.getAttribute("data-theme");
   themeToggle.textContent = t === "light" ? "🌞" : "🌙";
 }
-updateThemeIcon();
+if (themeToggle) updateThemeIcon();
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
@@ -113,35 +112,3 @@ if (modal) {
     if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
   });
 }
-
-/* =========================
-   Full-page “snap” + slide-in
-   + active nav highlighting
-   ========================= */
-const sections = Array.from(document.querySelectorAll(".snap-section"));
-const navLinks = Array.from(document.querySelectorAll(".nav a[data-nav]"));
-
-function setActiveNav(id) {
-  navLinks.forEach(a => a.classList.toggle("active", a.dataset.nav === id));
-}
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      // reveal animation
-      if (entry.isIntersecting) entry.target.classList.add("in-view");
-
-      // nav highlight: only when most of the section is visible
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
-        setActiveNav(entry.target.id);
-      }
-    });
-  },
-  {
-    threshold: [0.6],
-    rootMargin: `-${Math.round(parseInt(getComputedStyle(document.documentElement).getPropertyValue("--topbar-h")))}px 0px 0px 0px`
-  }
-);
-
-sections.forEach((s) => observer.observe(s));
-setActiveNav("home");
