@@ -1,6 +1,6 @@
 # Vijay Raj Venugopal — Portfolio Website
 
-> **Live Site:** https://vijayrajvenugopal.github.io
+> **Live Site:** https://vjraj0254-source.github.io
 
 A professional engineering portfolio website built with pure HTML, CSS, and JavaScript — no frameworks, no dependencies, blazing fast.
 
