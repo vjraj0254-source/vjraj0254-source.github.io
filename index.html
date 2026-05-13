@@ -1,457 +1,877 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vijay Raj Venugopal | Mechanical Engineering Portfolio</title>
-  <meta name="description" content="Mechanical Engineer portfolio: field engineering, infrastructure projects, facilities operations, system integration, and robotics." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vijay Raj Venugopal — Mechanical Engineer | Pipeline | Robotics</title>
+  <meta name="description" content="Vijay Raj Venugopal — Field-hardened Mechanical Engineer specializing in gas pipeline construction, robotics (ROS2/SLAM), and mechanical systems. Based in Lawrenceville, GA." />
+  <meta name="author" content="Vijay Raj Venugopal" />
+  <meta property="og:title" content="Vijay Raj Venugopal — Mechanical Engineer | Pipeline | Robotics" />
+  <meta property="og:description" content="From gas pipeline trenches to autonomous robots — a rare dual-expertise engineer open to Field Engineering, Mechanical Design, and Robotics roles." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vijayrajvenugopal.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="keywords" content="Mechanical Engineer, Pipeline Engineer, ROS2, Robotics, SLAM, AutoCAD, ASME, Six Sigma, Lawrenceville GA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <!-- Top Nav -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="logo" href="#home" aria-label="Go to top">VRV</a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-monogram">VRV</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
 
-      <div class="topbar-actions">
-        <button class="btn ghost" id="themeToggle" type="button" aria-label="Toggle theme">🌙</button>
-        <a class="btn primary" href="Vijay_Raj_Venugopal_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="VRV Home">
+        <span class="logo-text">VRV</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#connect" class="nav-link">Connect</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-right">
+        <div class="available-badge">
+          <span class="pulse-dot"></span>
+          <span>Available</span>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main id="home">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="kicker">Mechanical Engineer • Field Engineering • System Integration</p>
-          <h1>Vijay Raj <span class="accent">Venugopal</span></h1>
-
-          <p class="lead">
-            Mechanical Engineering graduate with hands-on experience in infrastructure projects, facilities operations,
-            quality control, and system integration—plus practical exposure to robotics and software integration.
-          </p>
-
-          <div class="hero-badges">
-            <span class="pill">Field & Site Supervision</span>
-            <span class="pill">Quality & Safety Compliance</span>
-            <span class="pill">Testing & Validation</span>
-            <span class="pill">Robotics (ROS2/SLAM)</span>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn" href="#experience">Experience</a>
-            <button class="btn ghost" type="button" id="copyEmail">Copy Email</button>
-          </div>
-
-          <div class="links-row">
-            <a href="mailto:vjraj0254@gmail.com">vjraj0254@gmail.com</a>
-            <span class="dot">•</span>
-            <a href="https://www.linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noreferrer">LinkedIn</a>
-            <span class="dot">•</span>
-            <a href="https://github.com/vjraj0254-source" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-
-          <p class="muted small">Lawrenceville, GA • Open to relocation</p>
-        </div>
-
-        <aside class="hero-card" aria-label="Profile card">
-          <img class="avatar" src="profile.jpg" alt="Profile photo of Vijay Raj Venugopal" onerror="this.style.display='none'" />
-          <div class="hero-card-body">
-            <h2 class="card-title">Focus Areas</h2>
-            <ul class="mini-list">
-              <li>Infrastructure & Pipeline Site Execution</li>
-              <li>Facilities Operations & Work Order Management</li>
-              <li>System Testing, Troubleshooting, Reporting</li>
-              <li>Robotics Integration & Simulation (Gazebo/RViz2)</li>
-            </ul>
-          </div>
-        </aside>
+  <!-- HERO -->
+  <section id="hero" aria-label="Introduction">
+    <canvas id="blueprint-canvas"></canvas>
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="hero-content">
+      <div class="hero-top reveal">
+        <span class="hero-location">📍 Lawrenceville, GA</span>
+        <span class="hero-open-badge">Open to: Field Engineering · Mechanical Design · Robotics Roles</span>
       </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p class="muted">
-          I work best where execution meets engineering—on-site coordination, quality control, system testing,
-          and practical problem-solving. I’ve supported pipeline and infrastructure work, managed facilities operations,
-          and built an autonomous indoor robot system as my master’s project.
-        </p>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>What I bring</h3>
-            <ul class="list">
-              <li>Strong field execution mindset with safety + quality focus</li>
-              <li>Clear documentation and stakeholder communication</li>
-              <li>Hands-on troubleshooting and process reliability improvement</li>
-              <li>Comfort working across mechanical + software interfaces</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Quick Highlights</h3>
-            <ul class="list">
-              <li>Facilities work orders + cross-team coordination (ODU)</li>
-              <li>Pipeline construction monitoring + code compliance checks</li>
-              <li>Water pipeline installation supervision + QC checks</li>
-              <li>Java full-stack training + internship exposure</li>
-            </ul>
-          </div>
-        </div>
+      <h1 class="hero-name reveal">Vijay Raj<br/><span class="accent">Venugopal</span></h1>
+      <div class="hero-divider reveal"></div>
+      <div class="hero-typing reveal">
+        <span id="typed-text"></span><span class="cursor-blink">|</span>
       </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section alt">
-      <div class="container">
-        <h2>Skills</h2>
-
-        <div class="skills-grid">
-          <div class="card">
-            <h3>Mechanical & Field</h3>
-            <div class="pill-row wrap">
-              <span class="pill">Site Supervision</span>
-              <span class="pill">Safety Compliance</span>
-              <span class="pill">Quality Control</span>
-              <span class="pill">Documentation</span>
-              <span class="pill">Process Reliability</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Tools & Software</h3>
-            <div class="pill-row wrap">
-              <span class="pill">AutoCAD</span>
-              <span class="pill">MATLAB</span>
-              <span class="pill">Excel</span>
-              <span class="pill">Linux (Ubuntu)</span>
-              <span class="pill">Python</span>
-              <span class="pill">Java</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Robotics & Simulation</h3>
-            <div class="pill-row wrap">
-              <span class="pill">ROS2</span>
-              <span class="pill">SLAM (Cartographer)</span>
-              <span class="pill">Nav2</span>
-              <span class="pill">Gazebo</span>
-              <span class="pill">RViz2</span>
-              <span class="pill">Sensor Fusion</span>
-            </div>
-          </div>
-        </div>
+      <p class="hero-tagline reveal">Field-hardened engineer. Codesmith. Autonomous systems builder.<br/>Bridging the gap between construction sites and cutting-edge robotics.</p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="assets/resume/Vijay_Raj_Venugopal_Resume.pdf" class="btn btn-outline" download>⬇ Download Resume</a>
       </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Experience</h2>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="dot"></div>
-            <div class="content">
-              <h3>Old Dominion University — Facilities Management (Part-Time)</h3>
-              <p class="muted">Nov 2024 – Dec 2025</p>
-              <ul class="list compact">
-                <li>Managed high-volume facility work orders; prioritized requests to reduce disruption.</li>
-                <li>Coordinated cross-functional teams to maintain safety standards and improve task efficiency.</li>
-                <li>Delivered professional customer service supporting faculty, staff, and students.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="dot"></div>
-            <div class="content">
-              <h3>STRIA Constructions — Engineer Trainee (Quality Control / Pipeline)</h3>
-              <p class="muted">Oct 2021 – Nov 2022</p>
-              <ul class="list compact">
-                <li>Prepared progress reports and handover documentation; maintained quality records.</li>
-                <li>Monitored gas pipeline activities (trenching, coating, crossings, lowering, backfilling).</li>
-                <li>Verified compliance with approved procedures, codes, and drawings during site execution.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="dot"></div>
-            <div class="content">
-              <h3>SAS Electricals — Site Engineer (Water Pipeline)</h3>
-              <p class="muted">Jun 2020 – Oct 2021 • Sep 2023 – Dec 2023</p>
-              <ul class="list compact">
-                <li>Supervised water pipeline installation/alignment; validated trench depth and excavation safety.</li>
-                <li>Inspected materials and pipe batch numbers; maintained QC throughout installation.</li>
-                <li>Coordinated crews, schedules, and resource allocation to keep progress on track.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="dot"></div>
-            <div class="content">
-              <h3>Quest Innovative Solutions — Trainee Software Engineer (Internship)</h3>
-              <p class="muted">Jan 2023 – Oct 2023</p>
-              <ul class="list compact">
-                <li>Completed Java full-stack training and applied skills on real project work.</li>
-                <li>Supported development, debugging, and performance-focused code improvements.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Projects</h2>
-            <p class="muted small">Filter by category, search, then open details.</p>
-          </div>
-
-          <input id="projectSearch" class="search" type="search" placeholder="Search projects (e.g., pipeline, ROS2, testing)..." />
-        </div>
-
-        <div class="filters" role="tablist" aria-label="Project filters">
-          <button class="chip active" data-filter="all" type="button">All</button>
-          <button class="chip" data-filter="infrastructure" type="button">Infrastructure</button>
-          <button class="chip" data-filter="facilities" type="button">Facilities</button>
-          <button class="chip" data-filter="robotics" type="button">Robotics</button>
-          <button class="chip" data-filter="software" type="button">Software</button>
-        </div>
-
-        <div id="projectsGrid" class="cards-grid">
-          <!-- Robotics -->
-          <article class="card project" data-category="robotics" data-tags="robotics ros2 slam nav2 lidar gazebo rviz2">
-            <h3>Autonomous Indoor Robot System (ROS2 + SLAM + Multi-Sensor)</h3>
-            <p class="muted">
-              Integrated ROS2 navigation with SLAM mapping/localization and LiDAR/camera/ultrasonic sensing.
-            </p>
-            <div class="meta">
-              <span class="tag">Master’s Project</span>
-              <span class="tag">Testing + Validation</span>
-              <span class="tag">Simulation + Real Trials</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn small" type="button"
-                data-modal-title="Autonomous Indoor Robot System"
-                data-modal-body="Designed and integrated an autonomous indoor mobile robot using ROS2 on Raspberry Pi platforms. Implemented SLAM (Cartographer), configured Nav2 for waypoint navigation, tuned planners/costmaps, validated localization accuracy, and tested in Gazebo + real indoor trials."
-              >Details</button>
-              <a class="btn small ghost" href="https://github.com/vjraj0254-source" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
-
-          <!-- Infrastructure -->
-          <article class="card project" data-category="infrastructure" data-tags="pipeline trenching qc safety documentation codes drawings">
-            <h3>Pipeline Construction Monitoring & Quality Compliance</h3>
-            <p class="muted">
-              Supported pipeline site execution by tracking progress, verifying procedures, and maintaining records.
-            </p>
-            <div class="meta">
-              <span class="tag">Quality Control</span>
-              <span class="tag">Codes & Drawings</span>
-              <span class="tag">Site Reporting</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn small" type="button"
-                data-modal-title="Pipeline Construction Monitoring"
-                data-modal-body="Monitored trenching, field joint coating, crossings, lowering, and backfilling. Verified compliance with approved procedures, applicable codes, and construction drawings. Maintained documentation and reported issues early to support smooth execution."
-              >Details</button>
-            </div>
-          </article>
-
-          <!-- Infrastructure -->
-          <article class="card project" data-category="infrastructure" data-tags="water pipeline alignment trench depth excavation safety qc materials">
-            <h3>Water Pipeline Installation Supervision (Site Engineering)</h3>
-            <p class="muted">
-              Supervised installation/alignment, validated excavation safety, and ensured material/QC checks.
-            </p>
-            <div class="meta">
-              <span class="tag">Site Supervision</span>
-              <span class="tag">Safety</span>
-              <span class="tag">Quality Checks</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn small" type="button"
-                data-modal-title="Water Pipeline Site Engineering"
-                data-modal-body="Supervised pipeline installation and alignment per plans/specs. Measured trench depth and monitored excavation to maintain safety compliance. Verified pipe batch numbers and performed material inspections while coordinating crews and schedules."
-              >Details</button>
-            </div>
-          </article>
-
-          <!-- Facilities -->
-          <article class="card project" data-category="facilities" data-tags="facilities work orders operations safety coordination service">
-            <h3>Facilities Operations Optimization (Work Orders)</h3>
-            <p class="muted">
-              Managed high-volume requests and coordinated teams to reduce disruptions in a fast-paced campus environment.
-            </p>
-            <div class="meta">
-              <span class="tag">Operations</span>
-              <span class="tag">Scheduling</span>
-              <span class="tag">Customer Focus</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn small" type="button"
-                data-modal-title="Facilities Operations"
-                data-modal-body="Managed and closed a high volume of facility work orders, prioritized tasks across deadlines, coordinated cross-functional teams for safe execution, and maintained service quality for campus stakeholders."
-              >Details</button>
-            </div>
-          </article>
-
-          <!-- Software -->
-          <article class="card project" data-category="software" data-tags="java full stack debugging optimization database">
-            <h3>Java Full-Stack Training & Internship Work</h3>
-            <p class="muted">
-              Built core Java + web foundation, contributed to debugging and code optimization in project work.
-            </p>
-            <div class="meta">
-              <span class="tag">Java</span>
-              <span class="tag">Full-Stack</span>
-              <span class="tag">Debugging</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn small" type="button"
-                data-modal-title="Java Full-Stack Internship"
-                data-modal-body="Completed intensive Java full-stack training and applied skills on real projects. Supported development, debugging, and code optimization to improve performance and reliability."
-              >Details</button>
-            </div>
-          </article>
-
-          <!-- Undergrad Project -->
-          <article class="card project" data-category="infrastructure" data-tags="energy heat pump solar waste heat efficiency">
-            <h3>Solar + A/C Assisted Water Heat Pump (Undergrad Project)</h3>
-            <p class="muted">
-              Designed a waste-heat recovery concept using condenser heat + solar collector to improve efficiency.
-            </p>
-            <div class="meta">
-              <span class="tag">Energy Systems</span>
-              <span class="tag">Sustainability</span>
-              <span class="tag">Techno-Economic</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn small" type="button"
-                data-modal-title="Solar + A/C Assisted Water Heat Pump"
-                data-modal-body="Investigated waste heat recovery from split A/C systems and repurposed condenser heat for domestic water heating. Integrated a solar collector to boost heat absorption and improved overall energy utilization with a feasible concept."
-              >Details</button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section">
-      <div class="container">
-        <h2>Education</h2>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>M.Eng. Mechanical Engineering</h3>
-            <p class="muted">Old Dominion University • Dec 2025 • GPA 3.54</p>
-          </div>
-          <div class="card">
-            <h3>B.E. Mechanical Engineering</h3>
-            <p class="muted">Bir Tikendrajit University • Dec 2023 • GPA 3.33</p>
-          </div>
-        </div>
-
-        <div class="card spacer">
-          <h3>Certification</h3>
-          <p class="muted">Java Certification Course — Quest Innovative Solutions (Apr 2023)</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Leadership -->
-    <section id="leadership" class="section alt">
-      <div class="container">
-        <h2>Leadership & Volunteering</h2>
-
-        <div class="cards-grid">
-          <div class="card">
-            <h3>Y’s Men / Y’s Youth Club</h3>
-            <p class="muted">President (2 years) • Community service leadership and event coordination</p>
-          </div>
-          <div class="card">
-            <h3>Rise Up Forum</h3>
-            <p class="muted">Community relief initiatives • On-ground coordination and supply distribution</p>
-          </div>
-          <div class="card">
-            <h3>MRA</h3>
-            <p class="muted">Charitable initiatives • Organized service activities supporting communities</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-
-        <div class="contact-card">
-          <div class="contact-item">
-            <p class="label">Email</p>
-            <p><a href="mailto:vjraj0254@gmail.com">vjraj0254@gmail.com</a></p>
-          </div>
-
-          <div class="contact-item">
-            <p class="label">Phone</p>
-            <p><a href="tel:+17573196579">757-319-6579</a></p>
-          </div>
-
-          <div class="contact-item">
-            <p class="label">LinkedIn</p>
-            <p><a href="https://www.linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noreferrer">View profile</a></p>
-          </div>
-        </div>
-
-        
-      </div>
-    </section>
-
-    <!-- Modal -->
-    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
-      <div class="modal-backdrop" data-close="true"></div>
-      <div class="modal-panel" role="document">
-        <div class="modal-head">
-          <h3 id="modalTitle">Title</h3>
-          <button class="btn ghost small" type="button" id="modalClose" aria-label="Close">✕</button>
-        </div>
-        <p class="muted" id="modalBody"></p>
+      <div class="hero-socials reveal">
+        <a href="https://linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/vijayrajvenugopal" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        </a>
+        <a href="mailto:vjraj0254@gmail.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
       </div>
     </div>
-  </main>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p class="muted small">© <span id="year"></span> Vijay Raj Venugopal</p>
-      <a class="muted small" href="#home">Back to top ↑</a>
+  <!-- ABOUT -->
+  <section id="about" aria-label="About me">
+    <div class="container">
+      <div class="section-label reveal">// 01</div>
+      <h2 class="section-title reveal">About <span class="accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <div class="stat-num" data-target="5">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="4">0</div>
+            <div class="stat-label">Major Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="5">0</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="3">0</div>
+            <div class="stat-label">Countries Worked</div>
+          </div>
+          <div class="about-what-i-bring">
+            <h3>What I Bring</h3>
+            <ul>
+              <li><span class="bring-icon">⚙️</span> Real-world pipeline & field construction experience</li>
+              <li><span class="bring-icon">🤖</span> Autonomous robotics: ROS2, SLAM, Navigation2</li>
+              <li><span class="bring-icon">📋</span> Code-compliant thinking (ASME B31.3, BPVC)</li>
+              <li><span class="bring-icon">💻</span> Software development (Python, Java, Linux)</li>
+              <li><span class="bring-icon">📐</span> Engineering design (AutoCAD, MATLAB, Gazebo)</li>
+              <li><span class="bring-icon">🏆</span> Six Sigma Green Belt — process optimization mindset</li>
+              <li><span class="bring-icon">🧩</span> Systems thinking across mechanical + digital domains</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about-bio reveal">
+          <p>I got my hands dirty on gas pipeline construction sites before most engineers had ever opened a simulation tool. Working across trenching operations, joint coating, pipeline crossings, and mechanical installations with STRIA Constructions, I learned what engineering actually feels like — not from a textbook, but from the ground up. That field intuition is something no classroom can teach, and it's baked into how I approach every problem.</p>
+          <p>But I didn't stop there. I pursued a Master of Engineering in Mechanical Engineering at Old Dominion University — not to escape the field, but to extend it. I built an autonomous indoor robot from scratch using ROS2, SLAM (Cartographer), LiDAR, and Navigation2. I designed path planning algorithms, fused sensor data in real time, and watched a machine I created navigate a physical space on its own. That's the intersection I live in: physical systems and intelligent software.</p>
+          <p>Today, I carry a rare combination that hiring managers don't often find in one person — a Six Sigma Green Belt, ASME code literacy, field QC experience, full-stack software development skills, and a working knowledge of modern autonomous systems. Whether the challenge is optimizing a pipeline inspection workflow, designing a mechanical component, or building a sensor-driven robot — I don't just understand the problem. I've built the solution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" aria-label="Skills">
+    <div class="container">
+      <div class="section-label reveal">// 02</div>
+      <h2 class="section-title reveal">Technical <span class="accent">Skills</span></h2>
+      <p class="section-intro reveal">A cross-domain skill set built across construction sites, graduate labs, and software environments.</p>
+      <div class="skills-grid reveal">
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔧</span>
+            <span>Mechanical & Piping</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item" data-skill="AutoCAD" data-pct="85">
+              <div class="skill-bar-label"><span>AutoCAD</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:85%"></div></div>
+            </div>
+            <div class="skill-bar-item" data-skill="MATLAB" data-pct="75">
+              <div class="skill-bar-label"><span>MATLAB</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:75%"></div></div>
+            </div>
+            <div class="skill-bar-item" data-skill="Piping Design" data-pct="80">
+              <div class="skill-bar-label"><span>Piping Design</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+            </div>
+            <div class="skill-bar-item" data-skill="HVAC Systems" data-pct="70">
+              <div class="skill-bar-label"><span>HVAC Systems</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:70%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">📋</span>
+            <span>Codes & Standards</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>ASME B31.3</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:85%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>BPVC Sec. I Div VIII</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:75%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>QC Documentation</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:90%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Six Sigma (DMAIC)</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">💻</span>
+            <span>Programming</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Python</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Java</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:70%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Linux (Ubuntu)</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:75%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🤖</span>
+            <span>Robotics & Sensing</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>ROS2</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>SLAM / Cartographer</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:75%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Navigation2</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:75%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>LiDAR / Sensors</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:70%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Gazebo / RViz2</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:72%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🛠️</span>
+            <span>Software Tools</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>MS Excel (Advanced)</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:85%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>MS Office Suite</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:90%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>FMEA Analysis</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:78%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" aria-label="Work experience">
+    <div class="container">
+      <div class="section-label reveal">// 03</div>
+      <h2 class="section-title reveal">Experience <span class="accent">Timeline</span></h2>
+      <p class="section-intro reveal">A track record built across continents, industries, and disciplines.</p>
+      <div class="timeline">
+
+        <div class="timeline-item reveal" data-domain="engineering">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card" tabindex="0">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-badge engineering">Engineering</div>
+                <h3>Facilities Management Assistant</h3>
+                <div class="timeline-meta">Old Dominion University · Nov 2024 – Dec 2025 · Norfolk, VA</div>
+              </div>
+              <span class="timeline-toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Managed 20+ facility work orders weekly, triaging and prioritizing maintenance requests across university buildings</li>
+                <li>Coordinated cross-functional teams across HVAC, plumbing, electrical, and structural maintenance domains</li>
+                <li>Enforced campus safety standards and compliance protocols during all facility operations</li>
+                <li>Streamlined work order tracking processes, reducing resolution time through better documentation practices</li>
+                <li>Leveraged engineering judgment to assess mechanical issues and recommend appropriate maintenance interventions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-domain="construction">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card" tabindex="0">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-badge construction">Construction</div>
+                <h3>Engineer Trainee</h3>
+                <div class="timeline-meta">STRIA Constructions · Oct 2021 – Nov 2022 · India</div>
+              </div>
+              <span class="timeline-toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Executed gas pipeline construction operations: trenching, joint coating, pipeline crossings, lowering-in, and backfilling</li>
+                <li>Ensured compliance with ASME standards and applicable codes throughout all phases of pipeline installation</li>
+                <li>Conducted mechanical inspections and maintained rigorous QC documentation for client handover packages</li>
+                <li>Installed, aligned, and troubleshot mechanical components and pipeline materials in field conditions</li>
+                <li>Prepared daily progress reports and compiled QC packages for project milestones and client sign-offs</li>
+                <li>Collaborated with cross-discipline teams to resolve field engineering challenges in real time</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-domain="construction">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card" tabindex="0">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-badge construction">Construction</div>
+                <h3>Site Engineer</h3>
+                <div class="timeline-meta">SAS Electricals · Jun 2020 – Oct 2021, Sep 2023 – Dec 2023 · India</div>
+              </div>
+              <span class="timeline-toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Supervised municipal water pipeline installation across multiple project sites</li>
+                <li>Managed a crew of 10–20 field workers, coordinating daily task assignments and production targets</li>
+                <li>Performed material inspections, trench depth measurements, and dimensional checks per project specifications</li>
+                <li>Maintained site safety compliance and ensured all work met municipal standards and client requirements</li>
+                <li>Liaised with project managers and clients to communicate progress and flag technical issues proactively</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-domain="software">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card" tabindex="0">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-badge software">Software</div>
+                <h3>Trainee Software Engineer</h3>
+                <div class="timeline-meta">Quest Innovative Solutions · Jan 2023 – Oct 2023 · India</div>
+              </div>
+              <span class="timeline-toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Debugged and optimized Java applications, resolving production issues and improving application stability</li>
+                <li>Participated in full-stack development projects, working across both backend logic and front-end interfaces</li>
+                <li>Completed a certified Java Full Stack Development program, building professional software development fundamentals</li>
+                <li>Collaborated with development teams to implement features, write tests, and maintain code quality standards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-label reveal">// 04</div>
+      <h2 class="section-title reveal">Featured <span class="accent">Projects</span></h2>
+      <p class="section-intro reveal">From autonomous robots to pipeline systems — engineering applied at every scale.</p>
+      <div class="projects-grid">
+
+        <div class="project-card reveal" tabindex="0" data-project="robot">
+          <div class="project-card-inner">
+            <div class="project-illustration">
+              <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="35" y="20" width="50" height="40" rx="6" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                <circle cx="50" cy="35" r="6" fill="#00d4ff" opacity="0.8"/>
+                <circle cx="70" cy="35" r="6" fill="#00d4ff" opacity="0.8"/>
+                <rect x="45" y="55" width="30" height="20" rx="3" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+                <rect x="25" y="58" width="15" height="10" rx="2" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                <rect x="80" y="58" width="15" height="10" rx="2" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                <line x1="35" y1="63" x2="45" y2="63" stroke="#00d4ff" stroke-width="1.5"/>
+                <line x1="75" y1="63" x2="80" y2="63" stroke="#00d4ff" stroke-width="1.5"/>
+                <circle cx="60" cy="15" r="5" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+                <line x1="60" y1="20" x2="60" y2="20" stroke="#f59e0b" stroke-width="1.5"/>
+                <path d="M20 50 Q10 50 10 60 Q10 75 25 75" stroke="#00d4ff" stroke-width="1" fill="none" stroke-dasharray="3,2" opacity="0.5"/>
+                <path d="M100 50 Q110 50 110 60 Q110 75 95 75" stroke="#00d4ff" stroke-width="1" fill="none" stroke-dasharray="3,2" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="project-badge">Robotics · Capstone</div>
+            <h3>Autonomous Indoor Robot System</h3>
+            <p>Built a fully autonomous mobile robot capable of real-time indoor mapping and self-navigation — from hardware integration to algorithm development.</p>
+            <div class="project-tags">
+              <span>ROS2</span><span>SLAM</span><span>LiDAR</span><span>Navigation2</span><span>Python</span>
+            </div>
+            <button class="btn-project-detail" onclick="openModal('robot')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project-card reveal" tabindex="0" data-project="solar">
+          <div class="project-card-inner">
+            <div class="project-illustration">
+              <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="10" y="20" width="45" height="30" rx="3" fill="none" stroke="#f59e0b" stroke-width="2"/>
+                <line x1="32" y1="20" x2="32" y2="50" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                <line x1="10" y1="35" x2="55" y2="35" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+                <circle cx="32" cy="12" r="6" fill="#f59e0b" opacity="0.8"/>
+                <path d="M55 35 Q70 35 70 50" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                <rect x="60" y="50" width="40" height="30" rx="4" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                <path d="M32 50 Q32 65 60 65" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,2"/>
+                <circle cx="80" cy="65" r="8" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+                <text x="77" y="68" font-size="7" fill="#00d4ff">AC</text>
+                <rect x="95" y="55" width="15" height="20" rx="2" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                <path d="M100 65 Q103 60 106 65" fill="none" stroke="#64748b" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="project-badge">Thermal · Undergraduate</div>
+            <h3>Solar-Assisted Heat Pump Water Heater</h3>
+            <p>Designed a hybrid water heating system combining waste heat recovery from AC condensers with solar thermal collectors for maximum energy efficiency.</p>
+            <div class="project-tags">
+              <span>Thermal Analysis</span><span>System Sizing</span><span>HVAC</span><span>Energy</span>
+            </div>
+            <button class="btn-project-detail" onclick="openModal('solar')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project-card reveal" tabindex="0" data-project="qc">
+          <div class="project-card-inner">
+            <div class="project-illustration">
+              <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="15" y="15" width="90" height="70" rx="4" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+                <rect x="25" y="25" width="45" height="8" rx="2" fill="#00d4ff" opacity="0.15"/>
+                <line x1="25" y1="42" x2="95" y2="42" stroke="#64748b" stroke-width="1" opacity="0.5"/>
+                <line x1="25" y1="52" x2="80" y2="52" stroke="#64748b" stroke-width="1" opacity="0.5"/>
+                <line x1="25" y1="62" x2="88" y2="62" stroke="#64748b" stroke-width="1" opacity="0.5"/>
+                <circle cx="90" cy="70" r="10" fill="#f59e0b" opacity="0.9"/>
+                <path d="M85 70 L89 74 L96 66" stroke="#0a0e1a" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="project-badge">Pipeline · Field Engineering</div>
+            <h3>Pipeline QC Documentation System</h3>
+            <p>Developed a structured QC tracking system for pipeline construction milestones — digitizing inspection records, joint logs, and handover packages to streamline client sign-offs.</p>
+            <div class="project-tags">
+              <span>ASME B31.3</span><span>QC Mgmt</span><span>Excel</span><span>Field Ops</span>
+            </div>
+            <button class="btn-project-detail" onclick="openModal('qc')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="project-card reveal" tabindex="0" data-project="facilities">
+          <div class="project-card-inner">
+            <div class="project-illustration">
+              <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="50" r="30" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+                <circle cx="60" cy="50" r="20" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
+                <circle cx="60" cy="50" r="8" fill="#00d4ff" opacity="0.8"/>
+                <line x1="60" y1="20" x2="60" y2="30" stroke="#f59e0b" stroke-width="2"/>
+                <line x1="60" y1="70" x2="60" y2="80" stroke="#f59e0b" stroke-width="2"/>
+                <line x1="30" y1="50" x2="40" y2="50" stroke="#f59e0b" stroke-width="2"/>
+                <line x1="80" y1="50" x2="90" y2="50" stroke="#f59e0b" stroke-width="2"/>
+                <text x="52" y="96" font-size="7" fill="#64748b">OPTIMIZE</text>
+              </svg>
+            </div>
+            <div class="project-badge">Operations · Six Sigma</div>
+            <h3>Facility Work Order Optimization</h3>
+            <p>Applied Six Sigma DMAIC methodology to analyze and reduce work order cycle times at Old Dominion University — cutting average resolution time and improving cross-team coordination.</p>
+            <div class="project-tags">
+              <span>Six Sigma</span><span>DMAIC</span><span>Process Analysis</span><span>FMEA</span>
+            </div>
+            <button class="btn-project-detail" onclick="openModal('facilities')">View Details →</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT MODALS -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" aria-label="Certifications">
+    <div class="container">
+      <div class="section-label reveal">// 05</div>
+      <h2 class="section-title reveal"><span class="accent">Certifications</span> & Badges</h2>
+      <p class="section-intro reveal">Continuous learning across engineering disciplines, quality systems, and software.</p>
+      <div class="certs-grid reveal">
+        <div class="cert-badge">
+          <div class="cert-icon">🔩</div>
+          <h3>Piping Design Engineering & Isometrics Masterclass</h3>
+          <div class="cert-issuer">Udemy</div>
+          <div class="cert-year">May 2026</div>
+          <div class="cert-shimmer"></div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">🏆</div>
+          <h3>Six Sigma Green Belt (Lean Six Sigma – Accredited)</h3>
+          <div class="cert-issuer">Udemy / AIGPE</div>
+          <div class="cert-year">Apr 2026</div>
+          <div class="cert-shimmer"></div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">❄️</div>
+          <h3>HVAC Maintenance Zero to Hero (Dual Certification)</h3>
+          <div class="cert-issuer">Udemy</div>
+          <div class="cert-year">Apr 2026</div>
+          <div class="cert-shimmer"></div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">⚠️</div>
+          <h3>AIGPE™ Certified FMEA Specialist</h3>
+          <div class="cert-issuer">Udemy / AIGPE</div>
+          <div class="cert-year">Apr 2026</div>
+          <div class="cert-shimmer"></div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">☕</div>
+          <h3>Java Full Stack Development Certification</h3>
+          <div class="cert-issuer">Quest Innovative Solutions</div>
+          <div class="cert-year">Apr 2023</div>
+          <div class="cert-shimmer"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" aria-label="Education">
+    <div class="container">
+      <div class="section-label reveal">// 06</div>
+      <h2 class="section-title reveal"><span class="accent">Education</span></h2>
+      <div class="edu-grid reveal">
+        <div class="edu-card">
+          <div class="edu-degree-badge">M.Eng.</div>
+          <h3>Master of Engineering — Mechanical Engineering</h3>
+          <div class="edu-uni">Old Dominion University</div>
+          <div class="edu-meta">Graduated Dec 2025 · Norfolk, VA</div>
+          <div class="edu-gpa">
+            <span>GPA: 3.54 / 4.0</span>
+            <div class="gpa-bar"><div class="gpa-fill" style="--gpa:88.5%"></div></div>
+          </div>
+          <div class="edu-courses">
+            <span>Robotics Systems</span>
+            <span>Advanced Fluid Mechanics</span>
+            <span>Finite Element Analysis</span>
+            <span>Heat Transfer</span>
+            <span>SLAM & Autonomous Navigation</span>
+            <span>Engineering Management</span>
+            <span>Control Systems</span>
+            <span>Research Methods</span>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-degree-badge">B.Eng.</div>
+          <h3>Bachelor of Engineering — Mechanical Engineering</h3>
+          <div class="edu-uni">Bir Tikendrajit University</div>
+          <div class="edu-meta">Graduated Dec 2023 · India</div>
+          <div class="edu-gpa">
+            <span>GPA: 3.33 / 4.0</span>
+            <div class="gpa-bar"><div class="gpa-fill" style="--gpa:83.25%"></div></div>
+          </div>
+          <div class="edu-courses">
+            <span>Thermodynamics</span>
+            <span>Manufacturing Processes</span>
+            <span>Machine Design</span>
+            <span>Fluid Mechanics</span>
+            <span>Strength of Materials</span>
+            <span>Industrial Engineering</span>
+            <span>Engineering Drawing</span>
+            <span>Project Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES & LEADERSHIP -->
+  <section id="languages" aria-label="Languages and leadership">
+    <div class="container">
+      <div class="section-label reveal">// 07</div>
+      <h2 class="section-title reveal">Languages & <span class="accent">Leadership</span></h2>
+      <div class="lang-lead-grid">
+        <div class="lang-section reveal">
+          <h3>Languages</h3>
+          <div class="languages-list">
+            <div class="lang-item">
+              <span class="lang-flag">🇬🇧</span>
+              <span class="lang-name">English</span>
+              <span class="lang-pill professional">Professional</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-flag">🇮🇳</span>
+              <span class="lang-name">Malayalam</span>
+              <span class="lang-pill native">Native</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-flag">🇮🇳</span>
+              <span class="lang-name">Tamil</span>
+              <span class="lang-pill conversational">Conversational</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-flag">🇮🇳</span>
+              <span class="lang-name">Hindi</span>
+              <span class="lang-pill basic">Basic</span>
+            </div>
+          </div>
+        </div>
+        <div class="lead-section reveal">
+          <h3>Leadership & Volunteering</h3>
+          <div class="lead-cards">
+            <div class="lead-card">
+              <div class="lead-icon">🌐</div>
+              <div class="lead-info">
+                <div class="lead-role">Youth Club President</div>
+                <div class="lead-org">Y's Men International · 2016–2022</div>
+                <div class="lead-desc">Led youth development programs and community initiatives across 6 years as club president</div>
+              </div>
+            </div>
+            <div class="lead-card">
+              <div class="lead-icon">🤝</div>
+              <div class="lead-info">
+                <div class="lead-role">Volunteer</div>
+                <div class="lead-org">Rise Up Forum · 2019–2023</div>
+                <div class="lead-desc">Contributed to community empowerment events and social development programs</div>
+              </div>
+            </div>
+            <div class="lead-card">
+              <div class="lead-icon">🏛️</div>
+              <div class="lead-info">
+                <div class="lead-role">Volunteer</div>
+                <div class="lead-org">MRA · Ongoing</div>
+                <div class="lead-desc">Active volunteer supporting organizational activities and member engagement</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME VIEWER -->
+  <section id="resume" aria-label="Resume viewer">
+    <div class="container">
+      <div class="section-label reveal">// 08</div>
+      <h2 class="section-title reveal">📄 My <span class="accent">Resume</span></h2>
+      <p class="section-intro reveal">A snapshot of my journey — feel free to read, save, or share.</p>
+      <div class="resume-actions reveal">
+        <a href="assets/resume/Vijay_Raj_Venugopal_Resume.pdf" class="btn btn-primary" download>⬇ Download Resume</a>
+        <button class="btn btn-outline" onclick="printResume()">🖨 Print Resume</button>
+      </div>
+
+      <!-- Desktop iframe viewer -->
+      <div class="resume-iframe-wrapper reveal" id="resume-desktop">
+        <iframe
+          id="resume-iframe"
+          src="assets/resume/Vijay_Raj_Venugopal_Resume.pdf"
+          title="Vijay Raj Venugopal Resume"
+          aria-label="Resume PDF viewer"
+          width="100%"
+          height="900"
+        >
+          <p>Your browser does not support PDF preview. Please use the <a href="assets/resume/Vijay_Raj_Venugopal_Resume.pdf" download>Download button</a> above.</p>
+        </iframe>
+      </div>
+
+      <!-- Mobile fallback -->
+      <div class="resume-mobile-card reveal" id="resume-mobile">
+        <div class="resume-mobile-icon">📄</div>
+        <h3>Vijay Raj Venugopal — Resume</h3>
+        <p>Tap a button below to access the full resume on your device.</p>
+        <div class="resume-mobile-btns">
+          <a href="assets/resume/Vijay_Raj_Venugopal_Resume.pdf" class="btn btn-primary" download>⬇ Download</a>
+          <a href="assets/resume/Vijay_Raj_Venugopal_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">🔍 View Full Screen</a>
+        </div>
+        <p class="resume-mobile-note">Tap 'View Full Screen' to read on mobile</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect" aria-label="Connect with me">
+    <div class="container">
+      <div class="section-label reveal">// 09</div>
+      <h2 class="section-title reveal">Let's Build <span class="accent">Something Together</span></h2>
+      <p class="section-intro reveal">Whether it's a pipeline project, a robotics challenge, or just a conversation about engineering — I'm always open to connecting.</p>
+      <div class="connect-grid reveal">
+
+        <div class="connect-card" data-accent="#0077B5">
+          <div class="connect-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <h3>Connect on LinkedIn</h3>
+          <p>Let's grow our professional network</p>
+          <a href="https://linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noopener" class="connect-btn">Visit Profile →</a>
+        </div>
+
+        <div class="connect-card" data-accent="#00d4ff" id="email-card">
+          <div class="connect-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>Send Me an Email</h3>
+          <p>For project inquiries or collaborations</p>
+          <a href="mailto:vjraj0254@gmail.com" class="connect-btn" id="email-connect-btn" onclick="copyEmail(event)">vjraj0254@gmail.com</a>
+          <div class="copied-tooltip" id="copied-tooltip">📋 Copied!</div>
+        </div>
+
+        <div class="connect-card" data-accent="#e2e8f0">
+          <div class="connect-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          </div>
+          <h3>View My GitHub</h3>
+          <p>See my code, projects, and contributions</p>
+          <!-- ⚠️ UPDATE: Replace 'vijayrajvenugopal' with your actual GitHub username below -->
+          <a href="https://github.com/vijayrajvenugopal" target="_blank" rel="noopener" class="connect-btn">Visit GitHub →</a>
+        </div>
+
+        <div class="connect-card" data-accent="#f59e0b">
+          <div class="connect-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Schedule a Chat</h3>
+          <p>Book a 15-min intro call — no pressure</p>
+          <!-- ⚠️ UPDATE: Replace the href below with your actual Calendly URL after creating a free account at calendly.com -->
+          <a href="https://cal.com/vijay-raj-i89eni/15min" target="_blank" rel="noopener" class="connect-btn">Book a Time →</a>
+        </div>
+
+      </div>
+
+      <div class="availability-badge reveal">
+        <span class="avail-dot"></span>
+        <span>Currently Available for Opportunities — Based in Lawrenceville, GA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-label="Contact form">
+    <div class="container">
+      <div class="section-label reveal">// 10</div>
+      <h2 class="section-title reveal">Get In <span class="accent">Touch</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's Talk Engineering</h3>
+          <p>Whether you have a project opportunity, want to collaborate, or just want to connect — I'd love to hear from you. I aim to respond within 24 hours.</p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <span class="contact-icon">✉️</span>
+              <a href="mailto:vjraj0254@gmail.com">vjraj0254@gmail.com</a>
+            </div>
+            <div class="contact-detail-item">
+              <span class="contact-icon">💼</span>
+              <a href="https://linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noopener">linkedin.com/in/vijay-raj-venugopal</a>
+            </div>
+            <div class="contact-detail-item">
+              <span class="contact-icon">📍</span>
+              <span>Lawrenceville, GA, USA</span>
+            </div>
+            <div class="contact-detail-item">
+              <span class="contact-icon">📞</span>
+              <a href="tel:+17573196579">757-319-6579</a>
+            </div>
+            <div class="contact-response">
+              <span class="pulse-dot"></span>
+              Typical response: within 24 hours
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <!-- 
+            FORMSPREE SETUP:
+            1. Go to https://formspree.io and create a free account
+            2. Click "New Form" and name it "Portfolio Contact"
+            3. Copy your form endpoint (looks like: https://formspree.io/f/xabc1234)
+            4. Replace "YOUR_FORMSPREE_ENDPOINT" below with that URL
+          -->
+          <form id="contact-form" action="https://formspree.io/f/https://formspree.io/f/mjglzqvl" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="Job Opportunity">Job Opportunity</option>
+                <option value="Project Collaboration">Project Collaboration</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Just Saying Hi">Just Saying Hi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me what's on your mind…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+          </form>
+          <div id="form-success" class="form-success" aria-live="polite">
+            ✅ Message sent! I'll get back to you within 24 hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">VRV</div>
+          <p>Field engineer. Robotics builder. Systems thinker.</p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com/in/vijay-raj-venugopal-02482b116" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/vijayrajvenugopal" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            </a>
+            <a href="mailto:vjraj0254@gmail.com" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#resume">Resume</a>
+          <a href="#connect">Connect</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Vijay Raj Venugopal. Built with ❤️ and engineering precision.</p>
+        <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">Back to top ↑</button>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
